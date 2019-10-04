@@ -31,6 +31,14 @@ const postsSchema = {
 
 const Post = mongoose.model("Post", postsSchema);
 
+const commentsSchema = {
+  name: String,
+  email: String,
+  comment: String
+};
+
+const Comment = mongoose.model("Comment", commentsSchema);
+
 app.get("/", function(req, res) {
   Post.find({}, function(err, posts) {
     res.render("home", {
@@ -42,10 +50,6 @@ app.get("/", function(req, res) {
 
 app.get("/about", function(req, res) {
   res.render("about");
-});
-
-app.get("/contact", function(req, res) {
-  res.render("contact");
 });
 
 app.get("/compose", function(req, res) {
@@ -69,6 +73,7 @@ app.post("/compose", function(req, res) {
 });
 
 app.get("/posts/:postId", function(req, res) {
+  console.log(req.params);
   const requestedPostId = req.params.postId;
 
   Post.findOne({_id: requestedPostId}, function(err, post) {
