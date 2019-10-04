@@ -1,0 +1,21 @@
+body {
+  color: #105e62;
+}
+
+nav {
+  background-color: #6bc5d2;
+}
+
+/* a {
+  color: #6bc5d2;
+} */
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #b5525c;
+  /* color: #d2fafb; */
+  text-align: center;
+}
