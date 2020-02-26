@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+
+<form class="form-signin text-center" action="/register" method="post">
+  <fieldset>
+    <h2>Sign Up</h2>
+  </fieldset>
+  <div class="form-group">
+    <label for="name">Name: </label>
+    <input type="text" class="form-control" name="name" value="" placeholder="Dwight Schrute" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email: </label>
+    <input type="email" class="form-control" name="email" value="" placeholder="dschrute@dundermifflin.com" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password: </label>
+    <input type="password" class="form-control" name="password" value="" placeholder="Sprinkles123" required>
+  </div>
+  <button type="submit" class="btn btn-lg btn-primary btn-block" name="button">Sign Up</button>
+</form>
+
+
+
+
+
+
+
+
+<%- include("partials/footer"); -%>

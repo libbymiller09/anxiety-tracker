@@ -85,6 +85,18 @@ app.get("/posts/:postId", function(req, res) {
   });
 });
 
+app.get("/register", function(req, res) {
+    res.render("register");
+});
+
+app.get("/login", function(req, res) {
+  res.render("login");
+});
+
+app.get("/logout", function(req, res) {
+  res.render("logout");
+});
+
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
