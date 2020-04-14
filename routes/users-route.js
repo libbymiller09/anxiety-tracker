@@ -2,7 +2,7 @@
 //jshint esversion:8
 
 const auth = require('../middleware/auth');
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const { User, validate } = require('../models/user-model');
 const express = require('express');
 const router = express.Router();
@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
     password: req.body.password,
     email: req.body.email
   });
-  user.password = await bcrypt.hash(user.password, 10);
+  // user.password = await bcrypt.hash(user.password, 10);
   await user.save();
 
   const token = user.generateAuthToken();
